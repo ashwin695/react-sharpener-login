@@ -3,7 +3,7 @@ import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
 import AuthContext from '../../store/auth-context';
-//import Input from '../UI/Input/Input';
+import Input from '../UI/Input/Input';
 
 const emailReducer = (state, action) => {
   if (action.type === 'USER_INPUT') {
@@ -103,7 +103,7 @@ const Login = (props) => {
   return (
     <Card className={classes.login}>
       <form onSubmit={submitHandler}>
-        {/* <Input
+        <Input
           id="email"
           label="E-Mail"
           type="email"
@@ -130,7 +130,7 @@ const Login = (props) => {
           value={enteredCollegeName}
           onChange={collegeNameChangeHandler}
           onBlur={validateCollegeNameHandler}
-        /> */}
+        />
 
         <div className={classes.actions}>
           <Button type="submit" className={classes.btn} disabled={!formIsValid}>
